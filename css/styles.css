@@ -7,8 +7,8 @@
 
 /* --- Custom Properties ------------------------------------ */
 :root {
-  --color-navy:      #1a2e4a;
-  --color-navy-dark: #111e30;
+  --color-navy:      #0f1923;
+  --color-navy-dark: #080e14;
   --color-amber:     #f5a623;
   --color-amber-dark:#d4891a;
   --color-white:     #ffffff;
@@ -16,6 +16,12 @@
   --color-grey-mid:  #e0e0e0;
   --color-grey-text: #555555;
   --color-text:      #1a1a1a;
+
+  /* Service accent colours — mirror the logo's four panels */
+  --color-electric:  #1a6abf;
+  --color-ev:        #2a9e3f;
+  --color-plumbing:  #c0392b;
+  --color-aircon:    #2980b9;
 
   --font-main: 'Inter', sans-serif;
 
@@ -169,33 +175,30 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  height: 72px;
   padding: 0 16px;
   max-width: var(--max-width);
   margin: 0 auto;
 }
 
 .site-logo {
-  color: var(--color-white);
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.2;
-  max-width: 240px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  flex-shrink: 0;
 }
 
 .site-logo span {
-  color: var(--color-amber);
+  display: none; /* text hidden — logo image used instead */
 }
 
 .logo-icon {
-  flex-shrink: 0;
-  width: 48px;
-  height: 48px;
+  display: none; /* circular icon hidden — horizontal logo used in header */
+}
+
+.logo-horizontal {
+  height: 54px;
+  width: auto;
   object-fit: contain;
-  border-radius: 50%;
 }
 
 /* Hamburger button */
@@ -506,8 +509,17 @@ body {
 .service-card:hover {
   box-shadow: var(--shadow-hover);
   transform: translateY(-2px);
-  border-top-color: var(--color-amber);
 }
+
+.service-card--electric { border-top-color: var(--color-electric); }
+.service-card--ev        { border-top-color: var(--color-ev); }
+.service-card--aircon    { border-top-color: var(--color-aircon); }
+.service-card--plumbing  { border-top-color: var(--color-plumbing); }
+
+.service-card--electric:hover { border-top-color: var(--color-electric); }
+.service-card--ev:hover        { border-top-color: var(--color-ev); }
+.service-card--aircon:hover    { border-top-color: var(--color-aircon); }
+.service-card--plumbing:hover  { border-top-color: var(--color-plumbing); }
 
 .service-card__icon {
   font-size: 1.5rem;
