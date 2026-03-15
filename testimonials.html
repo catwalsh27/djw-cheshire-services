@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- EDIT: Update title/description for SEO -->
+  <title>Customer Reviews | Trusted Electrician South Manchester | Daniel J Walsh</title>
+  <meta name="description" content="Read reviews from customers across South Manchester. Daniel J Walsh Electrical Services — NICEIC approved, 40+ years experience in domestic &amp; commercial electrical work." />
+  <link rel="canonical" href="https://djw-manchester-services.co.uk/testimonials.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://djw-manchester-services.co.uk/testimonials.html" />
+  <meta property="og:title" content="Customer Reviews | Daniel J Walsh Electrical Services, South Manchester" />
+  <meta property="og:description" content="Trusted by homeowners and businesses across South Manchester. Read what customers say about Daniel J Walsh Electrical Services." />
+  <meta name="twitter:card" content="summary" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- =====================================================
+       HEADER / NAV
+  ====================================================== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- EDIT: Update business name -->
+      <a href="index.html" class="site-logo">
+        Daniel J Walsh <span>Electrical Services</span>
+      </a>
+
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="main-nav"
+      >
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =====================================================
+       PAGE HERO
+  ====================================================== -->
+  <section class="page-hero">
+    <div class="container">
+      <!-- EDIT: Update page title -->
+      <h1 class="page-hero__title">Customer Reviews</h1>
+      <p class="page-hero__sub">What homeowners and businesses across South Manchester say about us</p>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       REVIEWS SECTION
+       Reviews are defined in the JS array below and
+       rendered into #reviews-grid automatically.
+       EDIT: Add new reviews to the `reviews` array in the
+       <script> tag at the bottom of this page.
+  ====================================================== -->
+  <main class="testimonials-page">
+    <div class="container">
+      <div class="section-title-wrap">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <!-- EDIT: Update overall rating copy if needed -->
+        <p class="section-subtitle">Rated 5 stars across all platforms &mdash; honesty, quality and reliability every time</p>
+      </div>
+
+      <!-- Reviews are injected here by the script below -->
+      <div class="reviews-grid" id="reviews-grid" aria-live="polite">
+        <!-- JS-rendered review cards will appear here -->
+      </div>
+
+      <div style="text-align:center; margin-top:48px;">
+        <a href="contact.html" class="btn btn--primary">Get Your Free Quote</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <div class="footer-col">
+        <!-- EDIT: Update business name -->
+        <p class="footer-brand">Daniel J Walsh <span>Electrical Services</span></p>
+        <p>40+ years of trusted electrical work across South Manchester. NICEIC approved, Part P certified.</p>
+        <!-- EDIT: Update phone number -->
+        <p><strong style="color:#fff;">Phone:</strong> <a href="tel:07967207570">07967207570</a></p>
+        <!-- EDIT: Update location -->
+        <p><strong style="color:#fff;">Based in:</strong> Handforth, South Manchester</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="services.html#domestic">Domestic Electrics</a></li>
+          <li><a href="services.html#commercial">Commercial Electrics</a></li>
+          <li><a href="services.html#ev">EV Charger Installation</a></li>
+          <li><a href="services.html#aircon">Air Conditioning</a></li>
+          <li><a href="services.html#rewiring">Rewiring &amp; Testing</a></li>
+          <li><a href="services.html#security">Fire &amp; Security</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact &amp; Quote</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <!-- EDIT: Update copyright year -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 Daniel J Walsh Electrical Services. All rights reserved. Handforth, South Manchester.</p>
+    </div>
+  </footer>
+
+  <!-- =====================================================
+       STICKY CALL BUTTON (mobile only)
+       EDIT: Update phone number
+  ====================================================== -->
+  <a href="tel:07967207570" class="sticky-call" aria-label="Call Daniel J Walsh Electrical Services">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.78a16 16 0 0 0 6.29 6.29l1.85-1.85a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+    </svg>
+    <!-- EDIT: Update phone number -->
+    Call Daniel: 07967207570
+  </a>
+
+  <!-- =====================================================
+       REVIEWS DATA & RENDER SCRIPT
+       EDIT: Add new reviews by adding objects to the
+       `reviews` array below. Each review needs:
+         name  — customer first name and last initial
+         job   — type of work carried out
+         stars — number from 1 to 5
+         text  — the review text (keep under ~200 chars)
+  ====================================================== -->
+  <script>
+    /* EDIT: Add or update reviews in this array */
+    var reviews = [
+      {
+        name:  "Sarah T.",
+        job:   "Consumer unit replacement, Wilmslow",
+        stars: 5,
+        text:  "Daniel was prompt, tidy and explained everything clearly. The new consumer unit looks brilliant and was done in a single day. Would highly recommend to anyone."
+      },
+      {
+        name:  "Mark H.",
+        job:   "EV charger installation, Cheadle",
+        stars: 5,
+        text:  "Had an EV charger fitted last month. Competitive price, arrived on time and left the garage spotless. The whole job was done in under three hours. Brilliant service."
+      },
+      {
+        name:  "Julie R.",
+        job:   "Full rewire, Bramhall",
+        stars: 5,
+        text:  "Daniel completely rewired our Victorian terrace. Minimal disruption, everything was left tidy and all work was certified. Honestly the best tradesperson we have ever used."
+      },
+      {
+        name:  "Chris M.",
+        job:   "Air conditioning installation, Stockport",
+        stars: 5,
+        text:  "Had a split-system air con put in the office. Daniel turned up exactly when he said, kept the mess to an absolute minimum and the system works perfectly. Couldn't be happier."
+      },
+      {
+        name:  "Amanda W.",
+        job:   "EICR testing, Handforth",
+        stars: 5,
+        text:  "Needed an EICR for a rental property. Daniel was thorough, professional and turned the certificate around the same day. Great communication throughout. Will use again."
+      },
+      {
+        name:  "Tom B.",
+        job:   "Commercial rewire, Alderley Edge",
+        stars: 5,
+        text:  "Daniel rewired our small office suite over a weekend so we didn't lose any working days. Excellent planning, no fuss, and the price was very fair. Highly recommended."
+      }
+    ];
+
+    /* Render function — no need to edit below this line */
+    (function renderReviews() {
+      var grid = document.getElementById('reviews-grid');
+      if (!grid) return;
+
+      reviews.forEach(function (review) {
+        /* Build star string */
+        var stars = '';
+        for (var i = 0; i < review.stars; i++) stars += '\u2605';
+        var emptyStars = '';
+        for (var j = review.stars; j < 5; j++) emptyStars += '\u2606';
+
+        var card = document.createElement('article');
+        card.className = 'review-card';
+        card.innerHTML =
+          '<div class="review-card__stars" aria-label="' + review.stars + ' stars">' + stars + emptyStars + '</div>' +
+          '<p class="review-card__text">\u201c' + review.text + '\u201d</p>' +
+          '<p class="review-card__name">' + review.name + '</p>' +
+          '<p class="review-card__job">' + review.job + '</p>';
+
+        grid.appendChild(card);
+      });
+    })();
+  </script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

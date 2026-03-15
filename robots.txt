@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://djw-manchester-services.co.uk/sitemap.xml
