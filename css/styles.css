@@ -1111,6 +1111,25 @@ body {
   flex-shrink: 0;
 }
 
+.contact-details {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+
+.contact-details a {
+  color: var(--color-navy);
+  font-weight: 500;
+}
+
+.contact-details a:hover {
+  color: var(--color-amber-dark);
+}
+
 .hours-table {
   width: 100%;
   border-collapse: collapse;
