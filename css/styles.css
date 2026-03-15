@@ -718,9 +718,22 @@ body {
   border: 2px solid rgba(245,166,35,0.3);
 }
 
-.map-container {
-  height: 380px;
+.coverage-map iframe {
+  display: block;
   width: 100%;
+  height: 380px;
+  border: 0;
+}
+
+.map-credit {
+  text-align: right;
+  font-size: 0.78rem;
+  padding: 4px 8px;
+  background: var(--color-navy);
+}
+
+.map-credit a {
+  color: var(--color-amber);
 }
 
 /* --- Footer ---------------------------------------------- */
