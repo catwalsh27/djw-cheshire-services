@@ -281,6 +281,11 @@
         <span class="area-pill">Didsbury</span>
         <span class="area-pill">South Manchester</span>
       </div>
+
+      <!-- Coverage map using OpenStreetMap — free, no API key required -->
+      <div class="coverage-map">
+        <div id="map" class="map-container" aria-label="Map of coverage area in South Manchester"></div>
+      </div>
     </div>
   </section>
 
@@ -345,5 +350,62 @@
   </a>
 
   <script src="js/main.js"></script>
+
+  <!-- Leaflet.js map for coverage area — loaded only on this page -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV/XN/WLcE=" crossorigin=""></script>
+  <script>
+    (function() {
+      var map = L.map('map', { scrollWheelZoom: false, zoomControl: true }).setView([53.365, -2.21], 11);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 18
+      }).addTo(map);
+
+      // Coverage area polygon — EDIT: adjust coordinates to change the covered area
+      var coverageArea = L.polygon([
+        [53.445, -2.320], // Didsbury / Northenden
+        [53.430, -2.120], // Reddish / Stockport east
+        [53.395, -2.095], // Hazel Grove / Offerton
+        [53.340, -2.095], // Poynton east
+        [53.295, -2.140], // Alderley Edge south
+        [53.295, -2.295], // Wilmslow south
+        [53.320, -2.360], // Handforth west
+        [53.410, -2.360]  // Cheadle / Gatley
+      ], {
+        color: '#1a2e4a',
+        fillColor: '#f5a623',
+        fillOpacity: 0.25,
+        weight: 2
+      }).addTo(map);
+
+      // Town markers — EDIT: add or remove markers as needed
+      var towns = [
+        { name: 'Handforth', lat: 53.358, lng: -2.216 },
+        { name: 'Wilmslow',  lat: 53.329, lng: -2.232 },
+        { name: 'Cheadle',   lat: 53.391, lng: -2.216 },
+        { name: 'Bramhall',  lat: 53.358, lng: -2.164 },
+        { name: 'Stockport', lat: 53.408, lng: -2.158 },
+        { name: 'Alderley Edge', lat: 53.304, lng: -2.235 },
+        { name: 'Poynton',   lat: 53.351, lng: -2.116 },
+        { name: 'Hazel Grove', lat: 53.382, lng: -2.119 },
+        { name: 'Didsbury',  lat: 53.415, lng: -2.225 }
+      ];
+
+      var icon = L.divIcon({
+        className: '',
+        html: '<div style="background:#1a2e4a;border:2px solid #f5a623;border-radius:50%;width:10px;height:10px;"></div>',
+        iconSize: [10, 10],
+        iconAnchor: [5, 5]
+      });
+
+      towns.forEach(function(t) {
+        L.marker([t.lat, t.lng], { icon: icon })
+          .addTo(map)
+          .bindPopup('<strong>' + t.name + '</strong><br>We cover this area');
+      });
+    })();
+  </script>
 </body>
 </html>
