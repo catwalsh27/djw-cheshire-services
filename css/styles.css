@@ -182,23 +182,25 @@ button {
 }
 
 .site-logo {
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.2;
+  max-width: 240px;
   display: flex;
   align-items: center;
-  flex-shrink: 0;
+  gap: 10px;
 }
 
 .site-logo span {
-  display: none; /* text hidden — logo image used instead */
+  color: var(--color-amber);
 }
 
 .logo-icon {
-  display: none; /* circular icon hidden — horizontal logo used in header */
-}
-
-.logo-horizontal {
-  height: 54px;
-  width: auto;
-  object-fit: contain;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
 }
 
 /* Hamburger button */
@@ -1091,6 +1093,34 @@ body {
   font-size: 0.82rem;
   color: var(--color-grey-text);
   font-weight: 500;
+}
+
+/* --- Logo Showcase (contact page) ------------------------ */
+.logo-showcase {
+  background: var(--color-navy-dark);
+  padding: 40px 16px;
+  text-align: center;
+}
+
+.logo-showcase .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.logo-showcase__horizontal {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-showcase__badge {
+  height: 90px;
+  width: 90px;
+  object-fit: contain;
+  border-radius: 50%;
 }
 
 /* --- Thanks Page ----------------------------------------- */
