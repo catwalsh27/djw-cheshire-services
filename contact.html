@@ -175,7 +175,7 @@
             netlify
             data-netlify="true"
             data-netlify-honeypot="bot-field"
-            action="/contact.html?success=true"
+            action="/thanks.html"
           >
             <!-- Netlify hidden input (required for static HTML deploys) -->
             <input type="hidden" name="form-name" value="quote-request" />
@@ -262,31 +262,6 @@
 
           </form>
 
-          <!-- Success message shown via CSS when ?success=true is in URL -->
-          <script>
-            (function() {
-              if (window.location.search.indexOf('success=true') !== -1) {
-                var form = document.querySelector('form[name="quote-request"]');
-                if (form) {
-                  form.style.display = 'none';
-                  var msg = document.createElement('div');
-                  msg.style.cssText = [
-                    'background:#f0fdf4',
-                    'border:1.5px solid #86efac',
-                    'border-radius:8px',
-                    'padding:24px',
-                    'color:#166534',
-                    'text-align:center',
-                    'font-size:1rem',
-                    'margin-top:8px'
-                  ].join(';');
-                  /* EDIT: Update success message */
-                  msg.innerHTML = '<strong style="font-size:1.15rem;">Thanks, your message has been sent!</strong><br><br>Daniel will be in touch shortly. If you need to speak to someone urgently, please call <a href="tel:07967207570" style="color:#15803d;font-weight:600;">07967207570</a>.';
-                  form.parentNode.insertBefore(msg, form);
-                }
-              }
-            })();
-          </script>
 
         </div>
 
